@@ -1,0 +1,302 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font-family);
+}
+:root{
+    --main-color: #adadad; 
+    --secondary-color: #64a19d;
+    --color-clair: #558985;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #f8f9fa;
+    --main-font-family:  "Varela Round"; 
+}
+body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+section{
+    min-height: 100vh;
+    padding: 20vh 10vw;
+}
+@media screen and (max-width: 992px) {
+    section{
+        min-height: 80vh;
+        padding: 5vh 10vw;
+    }
+}
+p{
+    color: var(--main-color);
+}
+section a{
+    color: var(--secondary-color);
+}
+/* start Navigation */
+.navbar{
+    padding: 1.25rem 0 !important;
+}
+.navbar .navbar-brand{
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    cursor: default;
+}
+.navbar #navbarNav{
+    flex-grow: 0 !important;
+}
+.navbar #navbarNav ul{
+    gap: 40px;
+}
+.navbar #navbarNav ul .nav-link{
+    font-size: 1.1rem;
+    color: var(--main-color) ;
+}
+
+.navbar #navbarNav ul .nav-link:hover{
+    color: var(--black-color) ;
+}
+.navbar button{
+    padding: .5rem .4rem;
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+.navbar button span,
+.navbar button .menu{
+    font-size: .9rem;
+    color: var(--secondary-color) !important;
+}
+@media screen and (max-width: 991px) {
+    .navbar{
+        background: var(--colo-white) !important;
+        padding: 1rem 0 !important;
+    }
+    .navbar .navbar-brand{
+        font-size: 1.3rem;
+        color: var(--black-color) !important;
+    }
+    .navbar #navbarNav ul{
+        gap: 10px;
+    }
+    
+    .navbar button{
+        display: flex;
+    }
+    
+}
+/* end Navigation */
+
+/* start Masthead */
+header{
+    height: calc(100vh - 78px);
+    position: relative;
+}
+.masthead{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.masthead h1{
+    font-family: var(--main-font-family);
+    font-size: 6em;
+    font-weight: 300;
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    color: transparent !important;
+    background-clip: text;
+}
+.masthead p{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    width: 30rem;
+}
+@media screen and (max-width: 767px) {
+    .masthead h1{
+        font-size: 3rem;   
+    }
+    .masthead p{
+        font-size: 1rem;
+        width: 22rem;
+    }
+    
+}
+@media screen and (max-width: 575px) {
+    .masthead h1{
+        font-size: 2rem;   
+    }
+    .masthead p{
+        font-size: .9rem;
+        width: 20rem;
+    }
+    
+}
+.masthead a{
+    background-color: var(--secondary-color);
+    color: var(--white-color) !important;
+    font-family: var(--main-font-family);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5vh;
+    font-size: .9rem;
+}
+.masthead a:hover{
+    background-color: var(--color-clair) !important;
+}
+/* end Masthead */
+/* start About */
+#about{
+    margin-top: 0;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);  
+    position: relative;
+}
+#about .container{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#about h2{
+    font-family: var(--main-font-family);
+}
+#about p{
+    font-family: var(--main-font-family);
+
+}
+
+/* end About */
+/* start Projects */
+#projects{
+    background-color: var(--gray-color);
+}
+
+#projects .wb::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 40%;
+    background: var(--secondary-color);
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media screen and (max-width: 991px) {
+    #projects div div:first-child::before{
+      display: none;
+    } 
+}
+#projects :first-child p,
+h5{
+    font-size: 1.1rem;
+}
+
+/* end Projects */
+/* start contact */
+#contact{
+    padding: 0;
+}
+aside{
+    padding: 20vh  0;
+    background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.2) 100%),url("../assets/img/bg-signup.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: var(--white-color);
+}
+aside svg{
+  font-size: 3rem;
+}
+aside h5{
+  font-size: 2rem;
+}
+aside input{
+    height: 4rem;
+}
+
+.form-control::placeholder {
+    opacity: 0.7 !important;
+    letter-spacing: 2px;
+    font-size: .9rem;
+}
+.form-control:focus{
+    border-color: transparent !important;
+    box-shadow: 0 0 0 .25rem transparent !important;
+}
+aside label{
+    letter-spacing: 2px;
+    background-color: var(--color-clair) !important;
+    border-color: var(--color-clair) !important;
+    color: var(--white-color) !important;
+    opacity: 0.8;
+    padding-top: 1.125rem !important;
+    padding-bottom: 1.125rem !important;
+}
+@media screen and (max-width: 768px) {
+    aside h5{
+        font-size: 1.8rem;
+    }
+    aside input{
+        height: 3.6rem;
+    }
+    .form-control::placeholder {
+        font-size: .8rem;
+    }
+    aside label{
+        letter-spacing: 1px !important;
+        font-size: .74rem !important;
+    }
+}
+@media screen and (max-width: 450px) {
+    aside label{
+        font-size: .55rem !important;
+        padding: 0;
+    }
+}
+
+#contact .social{
+    padding: 15vh 0;
+    min-height: 60vh;
+    background-color: var(--black-color);
+}
+
+.social .card {
+    border-bottom: 5px solid var(--secondary-color);
+}
+.social .card svg{
+    color: var(--secondary-color);
+}
+.social .card h5{
+    font-size: .9rem;
+    letter-spacing: 2px;
+}
+.social .card span{
+    background-color: var(--secondary-color);
+    display: inline-block;
+    width: 3.5rem;
+    height: 4px;
+}
+.social .card p{
+    font-size: .9rem;
+}
+.social .social-icon{
+    margin-top: 10vh;
+}
+.social .social-icon a{
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+/* end contact */
+/* start Footer */
+footer{
+    min-height: 10vh;
+    background-color: var(--black-color);
+}
+/* end Footer */
